@@ -1,6 +1,7 @@
 # AWS-EC2-report-generator-using-boto3
 
 This Python project fetches EC2 instance information from AWS and generates an Excel report detailing the instance name, account owner, and the age of the instances (in days) for a given AWS region. It utilizes the **boto3**, **pandas**, and **openpyxl** libraries to interact with AWS and generate the report in Excel format.
+
 `Note:- To be run at GitLab`
 
 ## Files in the Repository
