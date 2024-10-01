@@ -1,0 +1,22 @@
+image: python:3.9
+stages:
+  - generate_env_list
+
+generate_env_list:
+  stage: generate_env_list
+  before_script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+  script:
+    - echo "Printing AMI status for abc instance"
+    - python env_list.py $N_VIRGINIA $AWS_ACCESS_KEY_ID_abc $AWS_SECRET_ACCESS_KEY_abc
+    - echo "Printing AMI status for def instance"
+    - python env_list.py $FRANKFURT $AWS_ACCESS_KEY_ID_def $AWS_SECRET_ACCESS_KEY_def
+  artifacts:
+    paths:
+      - '*.xlsx'
+  tags:
+    - linux
+    - docker
+
+
