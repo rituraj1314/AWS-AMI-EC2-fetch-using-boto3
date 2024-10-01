@@ -1,1 +1,1 @@
-# AWS-AMI-EC2-fetch-using-boto3
+# AWS-EC2-report-generator-using-boto3
